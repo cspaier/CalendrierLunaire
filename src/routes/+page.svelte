@@ -1,7 +1,7 @@
 <script>
   import Calendrier from '$lib/calendrier/CalendrierLunaire.js';  
   import { VisibiliteLunaire } from '$lib/calendrier/VisibiliteLunaire';
-  
+  import { assets } from '$app/paths';
   //composants
   import CalendrierComposant from '$lib/components/CalendrierLunaire.svelte';
   import Reglages from '$lib/components/Reglages.svelte';
@@ -18,6 +18,7 @@
   
   
 </script>
+<a id="github-link" href="https://github.com/cspaier/CalendrierLunaire"><img src="{assets}/github-mark.svg"/></a>
 
 <div class="flex">
   <div class="outils">
@@ -35,5 +36,14 @@
   .outils{
       max-width: 350px;
 
+  }
+  #github-link{
+    position:absolute;
+    top:5px;
+    right:5px;
+  }
+
+  #github-link > img{
+    width:2em;
   }
 </style>
