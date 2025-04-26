@@ -2,11 +2,11 @@
 
 ## Origines
 
-    - Papa, tu peux m'expliquer la Lune? Pourquoi des fois elle est entière et des fois un croissant?
+> Papa, tu peux m'expliquer la Lune? Pourquoi des fois elle est entière et des fois un croissant?
   
    *Tasse de café, lampe torche, ombre... papier crayon pour proposer un calendrier circulaire afin de suivre les phases de la lune.*
 
-    - Oui, d'accord, mais des fois on la voit le matin, et des fois le soir.
+> Oui, d'accord, mais des fois on la voit le matin, et des fois le soir.
    
    *Reprend du café.*
 
