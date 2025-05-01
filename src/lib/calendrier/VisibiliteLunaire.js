@@ -87,8 +87,8 @@ export class VisibiliteLunaire{
     *   fin: l'heure du coucher de lune <= heure extérieure + 24
     * },...
     */
-    static getVisibiliteReelleFormatee(heureExterieure){
-      return VisibiliteLunaire.formatVisibilite(this.getVisibilitesReelles(), heureExterieure);
+    static getVisibiliteReelleFormatee(heureExterieure, position){
+      return VisibiliteLunaire.formatVisibilite(this.getVisibilitesReelles(position), heureExterieure);
     }
 
     /**
@@ -204,7 +204,7 @@ export class VisibiliteLunaire{
      * ]
      * @returns 
      */
-    static getVisibilitesReelles(){
+    static getVisibilitesReelles(position){
       //46°29′38″N 2°36′10″E
       // Nassigny est le centre de la France métropolitaine (Corse comprise)
 
@@ -212,8 +212,9 @@ export class VisibiliteLunaire{
       // Sans la corse: Vesdun
       // 46.53972222
       // 2.43027778
-      let latitude = 46.53972222;
-      let longitude = 2.43027778;
+      console.log(position)
+      let latitude = position.lat;
+      let longitude = position.lng;
       let jourLunaire = Math.round(VisibiliteLunaire.getJourLunaire());
       
       let tableauVisibilites = [];

@@ -86,7 +86,7 @@
         margin-top:1em;
         display: block;
 }
-fieldset {
+    fieldset {
       border: 1px solid #ccc;
       padding: 1em;
     }

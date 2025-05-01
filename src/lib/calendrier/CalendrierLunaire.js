@@ -21,7 +21,8 @@ export default class CalendrierLunaire{
             16: '🍪',
             20: '🧸',
             24: '💤'
-        }
+        },
+        position: {lat: 46.53972222, lng: 2.43027778}
     };
     
     
@@ -77,13 +78,14 @@ export default class CalendrierLunaire{
     get afficherHoraires(){ return this.options.afficherHoraires};
     get emojisHeures() {return this.options.emojisHeures};
     get visibiliteMoyenne(){return this.options.visibiliteMoyenne}
-    
+    get position() {return this.options.position}
+
     get tableauVisibilites(){
         if (this.visibiliteMoyenne){
             return VisibiliteLunaire.getVisibiliteMoyenneFormatee(this.heureExterieure);
 
         }
-        return VisibiliteLunaire.getVisibiliteReelleFormatee(this.heureExterieure);
+        return VisibiliteLunaire.getVisibiliteReelleFormatee(this.heureExterieure, this.position);
     }
     
     /***************************************************

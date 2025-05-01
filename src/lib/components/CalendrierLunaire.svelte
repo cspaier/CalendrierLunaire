@@ -4,8 +4,8 @@
 
 
     export let options;
-
 	export let calendrierDiv;
+
 	let calendrier;
 
     function updateRendu() {
