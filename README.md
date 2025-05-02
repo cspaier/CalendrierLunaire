@@ -32,7 +32,7 @@ On suppose node (testé en 18.20.8) et npm (testé en 10.8.2) installés.
 - Cloner le dépot: `git clone git@github.com:cspaier/CalendrierLunaire.git`
 - Se placer dans le dossier: `cd CalendrierLunaire`
 - Installer les dépendances: `npm install`
-- Lancer le serveur de dévellopement: `npm run dev`
+- Lancer le serveur de développement: `npm run dev`
 
 ## Mise en production
 C'est un projet statique. Il suffit donc de compiler le projet et d'héberger les fichiers derrière un serveur web.

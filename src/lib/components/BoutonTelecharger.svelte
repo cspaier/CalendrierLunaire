@@ -1,4 +1,9 @@
 <script>
+    import { Button } from "$lib/components/ui/button";
+    import * as Card from "$lib/components/ui/card";
+    import {Switch} from "$lib/components/ui/switch";
+    import {Label} from "$lib/components/ui/label";
+    
     import QRCode from 'qrcode-svg';
     
     const urlQrCode = "https://spaier.fr/lune";
@@ -71,23 +76,17 @@
     
 </script>
 
-<fieldset>
-    <legend>Télécharer</legend>    
-    <label>
-        Ajouter un QR code :
-        <input type="checkbox" bind:checked={afficherQrCode} />
-    </label>
-    <button bind:this={button}  onclick={telecharger}>🖨 Télécharger</button>
+<Card.Root> 
+    <Card.Content class="flex justify-between content-center">
 
-</fieldset>
+    <Button bind:this={button}  onclick={telecharger}>🖨 Télécharger</Button>
+    <div class="flex items-center">
+        <Switch id="AfficherQrCode" bind:checked={afficherQrCode} />
+        <Label for="AfficherQrCode">Ajouter un QR code </Label>
+    </div>
+</Card.Content>
+</Card.Root>
 
 <style>
-    button{
-        margin-top:1em;
-        display: block;
-}
-    fieldset {
-      border: 1px solid #ccc;
-      padding: 1em;
-    }
+
 </style>

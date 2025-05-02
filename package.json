@@ -1,5 +1,5 @@
 {
-	"name": "mooncalendar",
+	"name": "my-app",
 	"private": true,
 	"version": "0.0.1",
 	"type": "module",
@@ -10,14 +10,26 @@
 		"prepare": "svelte-kit sync || echo ''"
 	},
 	"devDependencies": {
+		"@lucide/svelte": "^0.503.0",
 		"@sveltejs/adapter-static": "^3.0.8",
 		"@sveltejs/kit": "^2.16.0",
 		"@sveltejs/vite-plugin-svelte": "^5.0.0",
+		"@tailwindcss/container-queries": "^0.1.1",
+		"@tailwindcss/forms": "^0.5.10",
+		"@tailwindcss/typography": "^0.5.16",
+		"autoprefixer": "^10.4.20",
+		"bits-ui": "^1.4.3",
+		"clsx": "^2.1.1",
 		"svelte": "^5.0.0",
 		"svelte-maplibre-gl": "^0.1.6",
-		"vite": "^6.2.5"
+		"tailwind-merge": "^3.2.0",
+		"tailwind-variants": "^1.0.0",
+		"tailwindcss": "^3.4.17",
+		"tailwindcss-animate": "^1.0.7",
+		"vite": "^6.0.0"
 	},
 	"dependencies": {
+		"mode-watcher": "^0.5.1",
 		"qrcode-svg": "^1.1.0",
 		"suncalc": "^1.9.0",
 		"two.js": "^0.8.18"

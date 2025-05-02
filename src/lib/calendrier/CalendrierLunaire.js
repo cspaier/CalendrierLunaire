@@ -13,7 +13,7 @@ export default class CalendrierLunaire{
         heureExterieure: 7,
         afficherEmojis: true,
         afficherHoraires: true,
-        afficherJourAtuel: true,
+        afficherJourActuel: true,
         visibiliteMoyenne: true,
         emojisHeures: {
             7: '⏰',
