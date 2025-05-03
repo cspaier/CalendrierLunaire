@@ -17,7 +17,7 @@
     let ongletActif = 'reglages';
   
     function updateReglages(event) {
-        options = Object.assign(options,event.detail);
+        options = Object.assign(options, event.detail);
     }
   </script>
   

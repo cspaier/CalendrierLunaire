@@ -9,6 +9,7 @@
 
   export let emojisHeures;
   export let heureExterieure;
+  export let couleurVisibilite;
 </script>
 
 <div class="max-w-4xl mx-auto p-6 space-y-6">
@@ -16,7 +17,7 @@
     Documentation
   </h2>
   <Calendrier {heureExterieure}/>
-  <Visibilite />
+  <Visibilite {couleurVisibilite}/>
 
   <HeureExterieure {heureExterieure}/>
   <Reperes {emojisHeures}/>

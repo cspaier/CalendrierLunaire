@@ -21,6 +21,7 @@
   export let emojisHeures;
   export let afficherJourActuel;
   export let visibiliteMoyenne;
+  export let couleurVisibilite;
   
   let calendrierDiv;
   
@@ -36,7 +37,8 @@
       afficherHoraires,
       afficherJourActuel,
       visibiliteMoyenne,
-      emojisHeures
+      emojisHeures,
+      couleurVisibilite
     });
   }
   
@@ -95,7 +97,7 @@
   
   
   <Card.Root>
-    <Card.Content class="flex space-x-4 py-4 justify-between">
+    <Card.Content class="flex space-x-4 py-3 justify-between items-center">
       <Card.Title>Type de visibilité</Card.Title>
       
       <RadioGroup bind:value={visibiliteMoyenne} onValueChange={mettreAJour} class="flex space-x-2" >
@@ -108,6 +110,7 @@
           <Label for="reelle">Réelle</Label>
         </div>
       </RadioGroup>
+        <Input class="w-[60px]" type="color" bind:value="{couleurVisibilite}" onchange={mettreAJour}/>
     </Card.Content>
   </Card.Root>   
   

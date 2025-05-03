@@ -22,7 +22,8 @@ export default class CalendrierLunaire{
             20: '🧸',
             24: '💤'
         },
-        position: {lat: 46.53972222, lng: 2.43027778}
+        position: {lat: 46.53972222, lng: 2.43027778},
+        couleurVisibilite: '#2ec27e'
     };
     
     
@@ -172,7 +173,7 @@ export default class CalendrierLunaire{
             this.anglesFromJour(jour).fin - 0.01,
             64
         );
-        arc.fill = 'green';
+        arc.fill = this.options.couleurVisibilite;
         arc.opacity = 0.6;
         arc.noStroke();
         return arc;
@@ -315,7 +316,6 @@ export default class CalendrierLunaire{
 
     dessineJourActuel(){
         let jour = Math.round(VisibiliteLunaire.getJourLunaire());
-        console.log("Jour lunaire détecté:", jour);
         const r1 = this.rayonsFromHeure(this.heureExterieure + 24);
         const r2 = this.rayonExterieur;
         
@@ -478,13 +478,9 @@ export default class CalendrierLunaire{
     
     
     majOptions(options){
-        console.log(this.tableauVisibilites)
-
-        console.log(options);
         this.options = options;
         this.effaceReglages();
         this.dessineReglages();
-        console.log(this.tableauVisibilites)
     }
 
     /*************************************
