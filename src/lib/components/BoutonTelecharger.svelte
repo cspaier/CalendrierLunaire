@@ -3,7 +3,9 @@
     import * as Card from "$lib/components/ui/card";
     import {Switch} from "$lib/components/ui/switch";
     import {Label} from "$lib/components/ui/label";
-    
+    import Info from "./ui/Info.svelte";
+    import Telecharger from "./doc/Telecharger.svelte";
+
     import QRCode from 'qrcode-svg';
     
     const urlQrCode = "https://spaier.fr/lune";
@@ -80,9 +82,13 @@
     <Card.Content class="flex justify-between content-center">
 
     <Button bind:this={button}  onclick={telecharger}>🖨 Télécharger</Button>
-    <div class="flex items-center">
+    <div class="space-x-4 grow flex justify-end">
+
+    <div class="flex items-center space-x-2">
         <Switch id="AfficherQrCode" bind:checked={afficherQrCode} />
         <Label for="AfficherQrCode">Ajouter un QR code </Label>
+    </div>
+    <Info><Telecharger /></Info>
     </div>
 </Card.Content>
 </Card.Root>

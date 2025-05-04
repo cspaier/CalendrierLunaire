@@ -16,12 +16,40 @@
   <h2 class="text-2xl font-bold mb-2 ">
     Documentation
   </h2>
-  <Calendrier {heureExterieure}/>
-  <Visibilite {couleurVisibilite}/>
+  <Card.Root>
+    <Card.Content class="space-y-2">
+      <Calendrier {heureExterieure}/>
+  </Card.Content>
+  </Card.Root>
 
+  <Card.Root>
+    <Card.Content class="space-y-2">
+  <Visibilite {couleurVisibilite}/>
+  </Card.Content>
+  </Card.Root>
+
+  <Card.Root>
+    <Card.Content class="space-y-2">
   <HeureExterieure {heureExterieure}/>
+  </Card.Content>
+  </Card.Root>
+
+  <Card.Root>
+    <Card.Content class="space-y-2">
   <Reperes {emojisHeures}/>
+    </Card.Content>
+  </Card.Root>
+  <Card.Root>
+
+    <Card.Content class="space-y-2">
   <Position />
+</Card.Content>
+</Card.Root>
+
+  <Card.Root>
+    <Card.Content class="space-y-2">
   <Telecharger />
+  </Card.Content>
+  </Card.Root>
   
 </div>

@@ -10,7 +10,14 @@
   import { RadioGroup, RadioGroupItem } from "$lib/components/ui/radio-group";
   import * as Card from "$lib/components/ui/card/index.js";
   import { Switch } from "$lib/components/ui/switch/index.js";
-  
+  import Info from "$lib/components/ui/Info.svelte";
+
+  import HeureExterieure from './doc/HeureExterieure.svelte';
+  import Visibilite from './doc/Visibilite.svelte';
+  import Reperes from './doc/Reperes.svelte';
+  import JourLunaire from './doc/JourLunaire.svelte';
+  import DocCalendrier from './doc/Calendrier.svelte';
+
   import CalendrierLunaire from './CalendrierLunaire.svelte';
   
   const dispatch = createEventDispatcher();
@@ -78,20 +85,29 @@
   
 </script>
 
-<div class="reglages space-y-2">
+<div class="space-y-2">
+  <h2 class="text-2xl font-bold mb-2 ">
+    Reglages
+  </h2>
   <Card.Root>
-    <Card.Content class="flex space-x-4 py-4">
+    <Card.Content class="flex space-x-4 py-4 items-center">
       <Card.Title class="shrink-0">Heure extérieure : <span class="inline-block w-4 text-left">{heureExterieure}h</span></Card.Title>
       <Slider class="shrink" type="single" min={0} max={24} step={1} bind:value={heureExterieure} onValueChange={mettreAJour} />
+      
+    <Info><HeureExterieure {heureExterieure}/></Info>
     </Card.Content>
   </Card.Root>
   
   
 
   <Card.Root>
-    <Card.Content class="flex space-x-4 py-4 justify-between">
+    <Card.Content class="flex space-x-4 py-4 justify-between items-center">
     <Card.Title>Afficher le jour lunaire actuel</Card.Title>
-    <Switch bind:checked={afficherJourActuel} onCheckedChange={mettreAJour} />
+    <div class="space-x-4">
+      <Switch bind:checked={afficherJourActuel} onCheckedChange={mettreAJour} />
+      <Info><JourLunaire/></Info>
+    </div>
+
     </Card.Content>
     </Card.Root>
   
@@ -99,6 +115,7 @@
   <Card.Root>
     <Card.Content class="flex space-x-4 py-3 justify-between items-center">
       <Card.Title>Type de visibilité</Card.Title>
+    <div class="space-x-4 grow flex justify-end">
       
       <RadioGroup bind:value={visibiliteMoyenne} onValueChange={mettreAJour} class="flex space-x-2" >
         <div class="flex items-center space-x-2">
@@ -110,13 +127,22 @@
           <Label for="reelle">Réelle</Label>
         </div>
       </RadioGroup>
-        <Input class="w-[60px]" type="color" bind:value="{couleurVisibilite}" onchange={mettreAJour}/>
+        <Input class="w-[60px] cursor-pointer" type="color" bind:value="{couleurVisibilite}" onchange={mettreAJour}/>
+        
+    <Info><Visibilite {couleurVisibilite}/></Info>
+
+</div>
     </Card.Content>
   </Card.Root>   
   
   <Card.Root>
     <Card.Header>
-      <Card.Title>Repères horaires</Card.Title>
+      <Card.Title class="flex justify-between">
+        <span>Repères horaires </span>
+        
+      <Info><Reperes/></Info>
+
+      </Card.Title>
     </Card.Header>
     <Card.Content class="flex justify-between">
       <div>
